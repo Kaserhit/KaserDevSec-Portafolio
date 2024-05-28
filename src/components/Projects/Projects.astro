@@ -27,17 +27,23 @@ import Solidity from "../icons/technologies/Solidity.astro";
 import SqlServer from "../icons/technologies/SqlServer.astro";
 import TypesScript from "../icons/technologies/TypesScript.astro";
 
-
-
 interface Tag {
-  id: string;
   name: string;
   class: string;
   icon: any;
 }
 
+interface Project {
+  title: string;
+  description: string;
+  link?: string; 
+  github?: string;
+  image: string;
+  tags: Tag[];
+}
 
-const TAGS: Record<string, Tag> = {
+
+const TAGS = {
   NEXT: {
     id: "NEXT",
     name: "Next.js",
@@ -200,25 +206,79 @@ const TAGS: Record<string, Tag> = {
 import GithubIcon from "../icons/GithubIcon.astro";
 import LinkButton from "../LinkButton.astro";
 
-import  { t } from "i18next";
+import i18next, {t} from "i18next";
 
-interface ProjectsItemProps {
-    title: string;
-    description: string;
-    github: string;
-    link?: string;
-    image?: string;
-    tags?: string[];
-    
+let projects: Project[] = [];
+
+if (i18next.language === "en") {
+  projects = [
+    {
+      title: "SpaceX Launches",
+      description: "The SpaceX launches project is a static demo developed in the Astro Web Framework with Typescript, utilizing Tailwind CSS. It serves as an educational exercise inspired by the Astro course created by MiduLive and adapted by Kaserhit.",
+      link: "https://kaserhit-astro-space.netlify.app/",
+      github: "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      image: "/assets/img/projects/SpaceX.jpg",
+      tags:  [TAGS.ASTRO, TAGS.TAILWIND, TAGS.TYPESCRIPT]
+    },
+    {
+      title: "Sotecsi Landing Page",
+      description: "The Sotecsi web system underwent a comprehensive Front-end renovation, which encompassed the redesign and enhancement of its user interface and experience. This endeavor unfolded within the ambit of crafting a revitalized web system and the concurrent development of a Progressive Web Application (PWA).",
+      link: "https://sotecsi.web.app/",
+      image: "/assets/img/projects/Sotecsi.jpg",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.FIREBASE]
+    }
+  ]
 }
 
-const PROJECTS: ProjectsItemProps[] = t("projects", { returnObjects: true }) as ProjectsItemProps[];
+if (i18next.language === "es") {
+  projects = [
+    {
+      title: "Lanzamientos de SpaceX",
+      description: "El proyecto de lanzamientos de SpaceX es una demostración estática desarrollada en el marco web Astro con Typescript, utilizando Tailwind CSS. Sirve como ejercicio educativo inspirado en el curso de Astro creado por MiduLive y adaptado por Kaserhit.",
+      link: "https://kaserhit-astro-space.netlify.app/",
+      github: "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      image: "/assets/img/projects/SpaceX.jpg",
+      tags:  [TAGS.ASTRO, TAGS.TAILWIND, TAGS.TYPESCRIPT]
+    },
+    {
+      title: "Página de Aterrizaje de Sotecsi",
+      description: "El sistema web de Sotecsi fue sometido a una renovación completa de Front-end, que abarcó el rediseño y mejora de su interfaz de usuario y experiencia. Este esfuerzo se desarrolló en el ámbito de la creación de un sistema web revitalizado y el desarrollo simultáneo de una Aplicación Web Progresiva (PWA).",
+      link: "https://sotecsi.web.app/",
+      image: "/assets/img/projects/Sotecsi.jpg",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.FIREBASE]
+    }
+  ]
+}
+
+
+
+if (i18next.language === "ja") {
+  projects = [
+    {
+      title: "SpaceXの打ち上げ",
+      description: "SpaceXの打ち上げプロジェクトは、Astro Web FrameworkとTypescriptを使用して開発された静的なデモで、Tailwind CSSを利用しています。MiduLiveによって作成され、Kaserhitによって適応されたAstroコースに触発された教育用の演習として機能します。",
+      link: "https://kaserhit-astro-space.netlify.app/",
+      github: "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      image: "/assets/img/projects/SpaceX.jpg",
+      tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.TYPESCRIPT]
+    },
+    {
+      title: "Sotecsiランディングページ",
+      description: "Sotecsiウェブシステムは、ユーザーインターフェースとエクスペリエンスの再設計と強化を包括した包括的なフロントエンドの改装を受けました。この取り組みは、リバイタライズされたウェブシステムの構築と同時に、プログレッシブWebアプリケーション（PWA）の開発を行いました。",
+      link: "https://sotecsi.web.app/",
+      image: "/assets/img/projects/Sotecsi.jpg",
+      tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.FIREBASE]
+    }
+  ]
+}
+
+
 
 
 ---
 
 <div id="projects-container" class="flex flex-col gap-y-16 pt-12 pb-12">
-  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+  {projects.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-1/2">
         <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -231,16 +291,16 @@ const PROJECTS: ProjectsItemProps[] = t("projects", { returnObjects: true }) as 
         </h3>
         <div class="flex flex-wrap mt-2">
           <ul class="flex flex-row mb-2 gap-x-2">       
-            {tags && tags.map((tag) => (
-              <li>
-                <span class={`flex gap-x-2 rounded-full text-xs ${TAGS[tag].class} py-1 px-2`}>
-                  <TAGS[tag].icon class="size-4" />
-                  <!--This is a comment to indicate that this is a warning that cannot be hidden but has not affected functionality during testing-->
-
-                  {TAGS[tag].name}
-                </span>
-              </li>
-            ))} 
+            {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
           </ul>
         </div>
         <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
