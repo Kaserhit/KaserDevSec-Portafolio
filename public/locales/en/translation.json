@@ -1,0 +1,105 @@
+{
+  "index": {
+    "title": "KaserDevSec Portfolio - Experience in Web Development and Cybersecurity",
+    "description": "Welcome to KaserDevSec! Our goal is to protect your online assets and ensure the integrity of your digital infrastructure. Contact us at kaserdevsec@gmail.com to find effective and personalized solutions for your security needs.",
+    "greeting": "Welcome to KaserDevSec!",
+    "linkedin": " Let's Connect on LinkedIn!",
+    "experience": "With over 5 years of hands-on experience, I bring expertise in Web Development and DevSecOps Operations, hailing from the vibrant tech hub of San José, Costa Rica.",
+    "specialization": "My specialization lies in the field of Cybersecurity, specifically in Forensic and Pentesting methodologies. I'm here to help you strengthen your digital security!"
+  },
+  "navbar": {
+    "home": "Home",
+    "experience": "Expertise",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "experience": [
+    {
+      "date": "May 2021 - Present",
+      "title": "Softon Digital",
+      "description": "Software Development Company",
+      "linkText": "about Softon Digital's services",
+      "link": "https://www.softonitg.com/"
+    },
+    {
+      "date": "January 2020 - May 2021",
+      "title": "SOTECSI",
+      "description": "Occupational Health Company",
+      "linkText": "visiting SOTECSI's Page",
+      "link": "https://sotecsi.web.app/"
+    },
+    {
+      "date": "April 2020",
+      "title": "SCE Lagos",
+      "description": "Volunteering for Liceo Los Lagos institution",
+      "linkText": "information about the SCE Lagos project",
+      "link": "https://sce-lagos.web.app/"
+    }
+  ],
+  "education": [
+    {
+      "date": "January 2022 - April 2024",
+      "title": "Specialization in Cyber Security",
+      "description": "Latin American University of Science and Technology | ULACIT"
+    },
+    {
+      "date": "December 2021 - January 2022",
+      "title": "SCRUM Master Certification",
+      "description": "International Scrum Institute"
+    },
+    {
+      "date": "May 2021",
+      "title": "Creating a Career Path in Cybersecurity",
+      "description": "The Organization of American States (OAS)"
+    },
+    {
+      "date": "January 2019 - December 2022",
+      "title": "Bachelor Computer Engineering",
+      "description": "Latin American University of Science and Technology | ULACIT"
+    }
+  ],
+  "experienceLabels": {
+    "knowMore": "Learn more",
+    "experienceTimeLine": "Professional Experience"
+  },
+  "educationLabels": {
+    "knowMore": "Learn More",
+    "educationTimeLine": "Education & Certifications"
+  },
+  "aboutMe": {
+    "greeting": "Hello! I'm Karl, a Computer Engineer.",
+    "description": "I work as a Computer Engineer specialized in software development and cybersecurity. My passion for technology drives me to stay at the forefront of the latest trends. With experience in creating secure and efficient applications, I focus on implementing best practices to protect systems and data.",
+    "skills": "My technical expertise has actively contributed to the tech community, sharing knowledge and collaborating on cutting-edge projects. Thanks to my programming and cybersecurity skills, I offer insight into key topics for those interested in exploring cutting-edge technologies.",
+    "achievements": "Furthermore, I have demonstrated my cybersecurity skills by participating in global pentesting challenges. Ranking among the top ten, I use tools like Wireshark and Burpsuite to gain secure and ethical access to different systems. This experience strengthens my ability to effectively protect systems and data."
+  },
+  "footer": {
+    "licenseMessage": "MIT License",
+    "aboutMe": "About Me",
+    "contact": "Contact"
+  },
+  "projectsLabels": {
+    "projectLabel": "Projects",
+    "ProjectMemorial": "\"If you can imagine it, you can program it\" - Alejandro Miguel Taboada Sánchez",
+    "ProjectMemorialAuthor": "- ATS Programming",
+    "projectPreview": "Preview",
+    "projectCode": "Code"
+  },
+  "projects": [
+    {
+      "title": "SpaceX Launches",
+      "description": "The SpaceX launches project is a static demo developed in the Astro Web Framework with Typescript, utilizing Tailwind CSS. It serves as an educational exercise inspired by the Astro course created by MiduLive and adapted by Kaserhit.",
+      "link": "https://kaserhit-astro-space.netlify.app/",
+      "github": "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      "image": "/assets/img/projects/SpaceX.jpg",
+      "tags": ["ASTRO", "TAILWIND", "TYPESCRIPT"]
+    },
+    {
+      "title": "Sotecsi Landing Page",
+      "description": "The Sotecsi web system underwent a comprehensive Front-end renovation, which encompassed the redesign and enhancement of its user interface and experience. This endeavor unfolded within the ambit of crafting a revitalized web system and the concurrent development of a Progressive Web Application (PWA).",
+      "link": "https://sotecsi.web.app/",
+      "image": "/assets/img/projects/Sotecsi.jpg",
+      "tags": ["HTML", "CSS", "JAVASCRIPT", "FIREBASE"]
+    }
+  ]
+}

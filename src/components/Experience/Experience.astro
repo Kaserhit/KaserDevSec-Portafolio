@@ -1,0 +1,23 @@
+---
+import { t } from "i18next";
+import ExperienceItem from "../Experience/ExperienceItem.astro"
+
+interface ExperienceItemProps {
+    title: string;
+    description: string;
+    date: string;
+    link?: string;
+    linkText?: string;
+    
+}
+
+const experience: ExperienceItemProps[] = t("experience", { returnObjects: true }) as ExperienceItemProps[];
+
+---
+<ol class="relative border-s border-gray-200 dark:border-sky-700 ">
+    {experience.map((experience) => (
+        <li class="mb-10 md:mb-6 ms-4">
+            <ExperienceItem {...experience}/>
+        </li>
+        ))}
+</ol>

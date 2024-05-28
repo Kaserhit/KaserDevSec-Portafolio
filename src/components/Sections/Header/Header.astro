@@ -1,0 +1,103 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import LanguageSelector from './LanguageSelector';
+import EmailIcon from "../../icons/EmailIcon.astro";
+import BuildingIcon from "../../icons/BuildingIcon.astro";
+import EducationIcon from "../../icons/EducationIcon.astro";
+import HomeIcon from "../../icons/HomeIcon.astro";
+
+let lang = i18next.language === 'en' ? '' : '/' + i18next.language;
+
+changeLanguage(i18next.language);
+---
+<html lang={i18next.language}>
+<head>
+    <style>
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-image: linear-gradient(45deg, #1A090D, #4B1C26, #1A090D);
+        }
+        .burger-menu-checkbox {
+            display: none;
+        }
+        .burger-menu-checkbox:checked ~ label > svg {
+            display: block;
+        }
+        .burger-menu-checkbox:checked ~ .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            background-color: #1A090D;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: none;
+            gap: 10px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #ccc;
+        }
+        
+        @media screen and (min-width: 481px) {
+            .nav-links {
+                display: flex;
+            }
+            .burger-menu-checkbox ~ label > svg {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .burger-menu-checkbox:checked ~ label > svg {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="flex justify-center items-center py-5 sticky-header">
+        <input type="checkbox" class="burger-menu-checkbox" id="burger-menu">
+        <label for="burger-menu" style="cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="white" d="M3 18h18v-2H3v2zM3 13h18v-2H3v2zM3 6v2h18V6H3z"/>
+            </svg>
+        </label>
+        <nav class="nav-links">
+            <div>
+                <a class="hover:text-slate-300 transition-colors duration-300" href={`${lang}/`}>{t("navbar.home")}
+                    <HomeIcon/> 
+                </a>
+            </div>
+            <div>
+                <a class="hover:text-slate-300 transition-colors duration-300" href={`#projects`}>{t("navbar.projects")}
+                    <BuildingIcon/>
+                </a>
+            </div>
+            <div>
+                <a class="hover:text-slate-300 transition-colors duration-300" href={`#expertise`}>{t("navbar.experience")}
+                    <EducationIcon/>
+                </a>
+            </div>
+            <div>
+                <a class="hover:text-slate-300 transition-colors duration-300" href={`#contact`}>{t("navbar.contact")}
+                    <EmailIcon/>
+                </a>
+            </div>
+            <LanguageSelector client:load/>
+        </nav>
+    </header>
+</body>
+</html>

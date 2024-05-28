@@ -1,0 +1,21 @@
+---
+const {class: className, id, displayArrow } = Astro.props;
+import ArrowDownIcon from "../icons/ArrowDownIcon.astro";
+---
+
+<section id={id} class=`w-full lg:max-w-[740px] mx-auto ${className}`>
+    <div class="h-full overflow-hidden relative"  id="section-container">
+        <slot/>
+    </div>
+</section>
+
+{displayArrow && <ArrowDownIcon class="animate-bounce w-6 h-6 mx-auto my-auto"/>}
+
+<style>
+    #section-container * {
+      @media (prefers-color-scheme: light) {
+        color: white;
+      }
+    }
+  </style>
+  

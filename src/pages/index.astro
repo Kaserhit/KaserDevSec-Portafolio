@@ -1,0 +1,95 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import AboutMe from "../components/AboutMe.astro";
+import SectionContainer from "../components/Sections/SectionContainer.astro";
+import SectionContainerAnimated from "../components/Sections/SectionContainerAnimated.astro";
+import Experience from "../components/Experience/Experience.astro";
+import Education from "../components/Education/Education.astro";
+import Projects from "../components/Projects/Projects.astro";
+import ProjectsMemorial from "../components/Projects/ProjectsMemorial.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import MediumIcon from "../components/icons/MediumIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
+import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro";
+import BriefCase from "../components/icons/BriefCaseIcon.astro";
+import GraduationIcon from "../components/icons/GraduationIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+
+changeLanguage("en");
+---
+
+<Layout title={t("index.title")} description={t("index.description")}>
+    <html lang={i18next.language}>
+    <main>
+        <SectionContainer id="about" class="py-40 gap-x-4" displayArrow={true}>
+            <div class="flex flex-col items-center animate__animated animate__fadeIn">
+                <img class="rounded-full mb-4 animate-pulse animate-zoom-in" src="/assets/img/personal/KaserDevSecLogo.png" alt="Kaserhit">
+
+                <h1 class="text-white text-5xl font-bold text-center pb-10 animate__animated animate__fadeIn">
+                    {t("index.greeting")}
+                </h1>
+                <div class="flex justify-center items-center gap-x-4 animate__animated animate__fadeIn">
+                    <h2 class="text-xl opacity-80 text-center">
+                        {t("index.experience")}
+                        <img src="https://img.icons8.com/color/48/costa-rica.png" alt="Costa Rica Flag" class="inline-block ml-1 h-6"/>
+                        {t("index.specialization")}
+                    </h2>
+                </div>
+            </div>
+            <nav class="flex flex-wrap justify-center items-center gap-x-4 pt-5 mb-5 animate__animated animate__fadeIn">
+                <SocialPill href="https://github.com/Kaserhit">
+                    <GithubIcon class="size-6" />
+                    Github
+                </SocialPill>
+                <SocialPill href="mailto:kaserdevsec@gmail.com">
+                    <EmailIcon class="size-6" />
+                    kaserdevsec@gmail.com
+                </SocialPill>
+                <SocialPill href="https://medium.com/@karl23aase">
+                    <MediumIcon class="size-6" />
+                    Medium
+                </SocialPill>
+            </nav>
+            <a href="https://www.linkedin.com/in/karl-aase/" target="_blank" rel="noopener" class="flex justify-center items-center hover:animate-pulse md:pt-10 animate__animated animate__fadeIn">
+                <Badge>{t("index.linkedin")} <LinkedinIcon/></Badge>
+            </a>
+        </SectionContainer>
+        <SectionContainerAnimated id="projects" class="py-12  gap-x-4 animate__animated animate__fadeIn" displayArrow={true}>
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center justify-center pb-12">
+                {t("projectsLabels.projectLabel")}
+                <CodeIcon class="size-6"/>
+            </h2>
+            <ProjectsMemorial/>
+            <Projects/>
+        </SectionContainerAnimated>
+        <SectionContainerAnimated id="expertise" class="py-12 pb-12 gap-x-4 animate__animated animate__fadeIn" displayArrow={true}>
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center justify-end">
+                {t("experienceLabels.experienceTimeLine")}
+                <BriefCase class="size-6"/>
+            </h2>
+            
+            <Experience/>
+        </SectionContainerAnimated>
+        <SectionContainerAnimated id="education" class="py-12 pb-12 gap-x-4 animate__animated animate__fadeIn" displayArrow={true}>
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
+                <GraduationIcon class="size-6"/>
+                {t("educationLabels.educationTimeLine")}
+            </h2>
+            <Education/>
+        </SectionContainerAnimated>
+        <SectionContainerAnimated id="aboutme" class="py-12 pb-12 gap-x-4 animate__animated animate__fadeIn">
+            <h2
+              class="text-3xl font-semibold mb-6 flex gap-x-4 items-center justify-center py-12"
+            >
+              <ProfileCheckIcon class="size-8" />
+              Sobre mí
+            </h2>
+            <AboutMe />
+          </SectionContainerAnimated>
+    </main>
+    </html>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import  { t } from "i18next";
+import EducationItem from "../Education/EducationItem.astro"
+
+interface EducationItemProps {
+    title: string;
+    description: string;
+    date: string;
+    link?: string;
+}
+
+const education: EducationItemProps[] = t("education", { returnObjects: true }) as EducationItemProps[];
+
+---
+<ol class="border-r border-gray-200 dark:border-sky-700">
+    {education.map((education) => (
+      <li>
+          <EducationItem {...education}/>
+      </li>
+      ))}
+</ol>

@@ -1,0 +1,23 @@
+---
+import  { t } from "i18next";
+
+---
+<article id="about-container" class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div class="order-2 md:order-1 py-12">
+    <h2 class="mb-4 text-2xl font-bold">{t("aboutMe.greeting")}</h2>
+    <p class="mb-4 leading-relaxed md:leading-loose"> {t("aboutMe.description")}</p>
+    <p class="mb-4 leading-relaxed md:leading-loose">{t("aboutMe.skills")}</p>
+    <p class="leading-relaxed md:leading-loose">{t("aboutMe.achievements")}</p>
+  </div>
+
+  <img src="https://avatars.githubusercontent.com/u/52587346?v=4" alt="Karl Aase" class="order-1 object-cover w-64 h-64 p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 ">
+</article>
+
+
+<style>
+  #about-container * {
+    @media (prefers-color-scheme: light) {
+      color: white;
+    }
+  }
+</style>

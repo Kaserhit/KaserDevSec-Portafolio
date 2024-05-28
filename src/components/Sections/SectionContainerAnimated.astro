@@ -1,0 +1,58 @@
+---
+const {class: className, id, displayArrow } = Astro.props;
+import ArrowDownIcon from "../icons/ArrowDownIcon.astro";
+---
+
+<section id={id} class=`w-full lg:max-w-[740px] mx-auto ${className} overflow-hidden relative opacity-0 scrollreveal`>
+    <div class="h-full overflow-hidden relative">
+        <slot/>
+    </div>
+</section>
+
+{displayArrow && <ArrowDownIcon class="animate-bounce w-6 h-6 mx-auto my-auto"/>}
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scrollreveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .scrollreveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s ease forwards;
+  }
+</style>
+
+<script>
+  const isElementInViewport = (el: HTMLElement): boolean => {
+    const rect = el.getBoundingClientRect();
+    const threshold = 0.5;
+    const elementHeight = rect.height || el.clientHeight;
+    return (
+      rect.top + elementHeight * threshold >= 0 &&
+      rect.bottom - elementHeight * threshold <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  };
+
+  document.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll<HTMLElement>('.scrollreveal');
+    elements.forEach((el) => {
+      if (isElementInViewport(el)) {
+        el.classList.add('in-view');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,104 @@
+{
+  "index": {
+    "title": "KaserDevSec Portafolio - Experiencia en Desarrollo Web y Ciberseguridad",
+    "description": "¡Bienvenidos a KaserDevSec! Nuestro objetivo es proteger tus activos en línea y garantizar la integridad de tu infraestructura digital. Contáctanos en kaserdevsec@gmail.com para encontrar soluciones efectivas y personalizadas para tus necesidades de seguridad.",
+    "greeting": "¡Bienvenidos a KaserDevSec!",
+    "linkedin": "¡Conéctemos en LinkedIn!",
+    "experience": "Con más de 5 años de experiencia práctica, mi enfoque se centra en el Desarrollo Web y las Operaciones DevSecOps. Trabajado constantemente desde el vibrante Hub tecnológico de San José, Costa Rica",
+    "specialization": "Mi especialización se encuentra en el campo de la Ciberseguridad, específicamente en metodologías Forenses y de Pentesting. Estoy aquí para ayudarte a fortalecer tu seguridad digital."
+  },
+  "navbar": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "experience": [
+    {
+      "date": "Mayo 2021 - Actualidad",
+      "title": "Softon Digital",
+      "description": "Compañía de Desarrollo de Software",
+      "linkText": "acerca de los servicios de Softon Digital",
+      "link": "https://www.softonitg.com/"
+    },
+    {
+      "date": "Enero 2020 - Mayo 2021",
+      "title": "SOTECSI",
+      "description": "Compañía de Salud Ocupacional",
+      "linkText": "visitando la Página de SOTECSI",
+      "link": "https://sotecsi.web.app/"
+    },
+    {
+      "date": "Abril 2020",
+      "title": "SCE Lagos",
+      "description": "Voluntariado para la institución Liceo Los Lagos",
+      "linkText": "información sobre el proyecto de SCE Lagos",
+      "link": "https://sce-lagos.web.app/"
+    }
+  ],
+  "experienceLabels": {
+    "knowMore": "Saber más",
+    "experienceTimeLine": "Experiencia Profesional"
+  },
+  "education": [
+    {
+      "date": "Enero de 2022 - Abril de 2024",
+      "title": "Especialización en Ciberseguridad",
+      "description": "Universidad Latinoamericana de Ciencia y Tecnología | ULACIT"
+    },
+    {
+      "date": "Diciembre de 2021 - Enero de 2022",
+      "title": "Certificación SCRUM Master",
+      "description": "Instituto Internacional Scrum"
+    },
+    {
+      "date": "Mayo de 2021",
+      "title": "Creación de una Trayectoria Profesional en Ciberseguridad",
+      "description": "Organización de los Estados Americanos (OEA)"
+    },
+    {
+      "date": "Enero de 2019 - Diciembre de 2022",
+      "title": "Bachillerato en Ingeniería Informática",
+      "description": "Universidad Latinoamericana de Ciencia y Tecnología | ULACIT"
+    }
+  ],
+  "educationLabels": {
+    "knowMore": "Conoce más",
+    "educationTimeLine": "Formación Profesional"
+  },
+  "footer": {
+    "licenseMessage": "Licencia MIT",
+    "aboutMe": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "aboutMe": {
+    "greeting": "¡Hola! Soy Karl, Ingeniero en Computación",
+    "description": "Ejerco como Ingeniero en Computación especializado en  el desarrollo de software y ciberseguridad. Mi pasión por la tecnología me impulsa a estar a la vanguardia de las últimas tendencias. Con experiencia en crear aplicaciones seguras y eficientes, me dedico a implementar las mejores prácticas para proteger sistemas y datos.",
+    "skills": "Mi experiencia técnica ha contribuido activamente en la comunidad tecnológica, compartiendo conocimientos y colaborando en proyectos de última vanguardia. Gracias a mis competencias en programación y seguridad informática, ofrezco exposición a temas clave para aquellos interesados en explorar tecnologías de punta.",
+    "achievements": "Además, he demostrado mis habilidades en ciberseguridad participando en desafíos de pentesting a nivel global. Clasificándome entre los diez primeros, utilizo herramientas como Wireshark y Burpsuite para obtener acceso seguro y ético a diferentes sistemas. Esta experiencia fortalece mi capacidad para proteger sistemas y datos de manera efectiva."
+  },
+  "projectsLabels": {
+    "projectLabel": "Proyectos",
+    "ProjectMemorial": "\"Si puedes imaginarlo, puedes programarlo\" - Alejandro Miguel Taboada Sánchez",
+    "ProjectMemorialAuthor": "- Programación ATS",
+    "projectPreview": "Vista previa",
+    "projectCode": "Código"
+  },
+  "projects": [
+    {
+      "title": "Lanzamientos de SpaceX",
+      "description": "El proyecto de lanzamientos de SpaceX es una demostración estática desarrollada en el marco web Astro con Typescript, utilizando Tailwind CSS. Sirve como ejercicio educativo inspirado en el curso de Astro creado por MiduLive y adaptado por Kaserhit.",
+      "link": "https://kaserhit-astro-space.netlify.app/",
+      "github": "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      "image": "/assets/img/projects/SpaceX.jpg",
+      "tags": ["ASTRO", "TAILWIND", "TYPESCRIPT"]
+    },
+    {
+      "title": "Página de Aterrizaje de Sotecsi",
+      "description": "El sistema web de Sotecsi fue sometido a una renovación completa de Front-end, que abarcó el rediseño y mejora de su interfaz de usuario y experiencia. Este esfuerzo se desarrolló en el ámbito de la creación de un sistema web revitalizado y el desarrollo simultáneo de una Aplicación Web Progresiva (PWA).",
+      "link": "https://sotecsi.web.app/",
+      "image": "/assets/img/projects/Sotecsi.jpg",
+      "tags": ["HTML", "CSS", "JAVASCRIPT", "FIREBASE"]
+    }
+  ]
+}

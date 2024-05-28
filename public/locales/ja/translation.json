@@ -1,0 +1,106 @@
+{
+  "index": {
+    "title": "KaserDevSecポートフォリオ - ウェブ開発とサイバーセキュリティの経験",
+    "description": "KaserDevSecへようこそ！私たちの目標は、オンライン資産を保護し、デジタルインフラの整合性を確保することです。お客様のセキュリティニーズに効果的かつパーソナライズされたソリューションをご提供いたします。お問い合わせは、kaserdevsec@gmail.com までお願いします",
+    "greeting": "KaserDevSec へようこそ!",
+    "linkedin": "LinkedInでつながりましょう！",
+    "experience": "5年以上の実務経験があり、私の焦点はWeb開発とDevSecOpsの運用にあります。コスタリカのサンホセ市にある活気に満ちたテクノロジーハブで常に働いています。",
+    "specialization": "私の専門はサイバーセキュリティの分野で、特にフォレンジックとペンテスティングの方法論に特化しています。あなたのデジタルセキュリティを強化するお手伝いをします。"
+  },
+  "navbar": {
+    "home": "ホーム",
+    "experience": "経験",
+    "education": "教育",
+    "projects": "プロジェクト",
+    "contact": "コンタクト"
+  },
+  "experience": [
+    {
+      "date": "2021年5月 - 現在",
+      "title": "Softon Digital",
+      "description": "ソフトウェア開発会社",
+      "linkText": "Softon Digitalのサービスについて",
+      "link": "https://www.softonitg.com/"
+    },
+    {
+      "date": "2020年1月 - 2021年5月",
+      "title": "SOTECSI",
+      "description": "職業健康会社",
+      "linkText": "SOTECSIのページを訪問する",
+      "link": "https://sotecsi.web.app/"
+    },
+    {
+      "date": "2020年4月",
+      "title": "SCE Lagos",
+      "description": "リセオ・ロス・ラゴス機関へのボランティア活動",
+      "linkText": "SCE Lagosプロジェクトに関する情報",
+      "link": "https://sce-lagos.web.app/"
+    }
+  ],
+  "education": [
+    {
+      "date": "2022年1月 - 2024年4月",
+      "title": "サイバーセキュリティ専攻",
+      "description": "ラテンアメリカ科学技術大学 | ULACIT"
+    },
+    {
+      "date": "2021年12月 - 2022年1月",
+      "title": "SCRUMマスター認定",
+      "description": "インターナショナルスクラム研究所"
+    },
+    {
+      "date": "2021年5月",
+      "title": "サイバーセキュリティのキャリアパスの構築",
+      "description": "米州機構（OAS）"
+    },
+    {
+      "date": "2019年1月 - 2022年12月",
+      "title": "情報工学の学士号",
+      "description": "ラテンアメリカ科学技術大学 | ULACIT"
+    }
+  ],
+  "experienceLabels": {
+    "knowMore": "もっと知る",
+    "experienceTimeLine": "職務経験"
+  },
+  "educationLabels": {
+    "knowMore": "もっと知る",
+    "educationTimeLine": "教育と認定"
+  },
+  "footer": {
+    "licenseMessage": "MITライセンス",
+    "aboutMe": "自己紹介",
+    "contact": "お問い合わせ"
+  },
+  "aboutMe": {
+    "greeting": "こんにちは！私はカールです、コンピューターエンジニアです。",
+    "description": "ソフトウェア開発とサイバーセキュリティに特化したコンピューターエンジニアとして働いています。テクノロジーへの情熱が私を最新のトレンドの最前線に留めています。安全で効率的なアプリケーションを作成する経験を活かし、システムとデータを保護するためのベストプラクティスを実装しています。",
+    "skills": "私の技術的な専門知識は、テクノロジーコミュニティに積極的に貢献しており、最新のプロジェクトで知識を共有し、協力しています。プログラミングとサイバーセキュリティのスキルを活かし、最先端のテクノロジーを探求したい方々に重要なトピックについて示唆しています。",
+    "achievements": "さらに、グローバルなペントテストチャレンジに参加することで、サイバーセキュリティのスキルを証明しています。トップ10の中にランクインし、WiresharkやBurpsuiteなどのツールを使用して異なるシステムに安全かつ倫理的にアクセスしています。この経験は、システムとデータを効果的に保護する能力を強化しています。"
+  },
+  "projectsLabels": {
+    "projectLabel": "プロジェクト",
+    "ProjectMemorial": "「想像できるなら、プログラムできる」- アレハンドロ・ミゲル・タボアダ・サンチェス",
+    "ProjectMemorialAuthor": "- ATS プログラミング",
+    "projectPreview": "プレビュ",
+    "projectCode": "コード"
+  },
+
+  "projects": [
+    {
+      "title": "SpaceXの打ち上げ",
+      "description": "SpaceXの打ち上げプロジェクトは、Astro Web FrameworkとTypescriptを使用して開発された静的なデモで、Tailwind CSSを利用しています。MiduLiveによって作成され、Kaserhitによって適応されたAstroコースに触発された教育用の演習として機能します。",
+      "link": "https://kaserhit-astro-space.netlify.app/",
+      "github": "https://github.com/Kaserhit/Astro-Space-Kaserhit",
+      "image": "/assets/img/projects/SpaceX.jpg",
+      "tags": ["ASTRO", "TAILWIND", "TYPESCRIPT"]
+    },
+    {
+      "title": "Sotecsiランディングページ",
+      "description": "Sotecsiウェブシステムは、ユーザーインターフェースとエクスペリエンスの再設計と強化を包括した包括的なフロントエンドの改装を受けました。この取り組みは、リバイタライズされたウェブシステムの構築と同時に、プログレッシブWebアプリケーション（PWA）の開発を行いました。",
+      "link": "https://sotecsi.web.app/",
+      "image": "/assets/img/projects/Sotecsi.jpg",
+      "tags": ["HTML", "CSS", "JAVASCRIPT", "FIREBASE"]
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+---
+// Import for Icon on Pills
+import NextJS from "../icons/technologies/NextJS.astro";
+import Tailwind from "../icons/technologies/Tailwind.astro";
+import AstroIcon from "../icons/technologies/AstroIcon.astro";
+import AtlassianIcon from "../icons/technologies/Atlassian.astro";
+import Aws from "../icons/technologies/Aws.astro";
+import Azure from "../icons/technologies/Azure.astro";
+import Boostrap from "../icons/technologies/Boostrap.astro";
+import Cloudflare from "../icons/technologies/Cloudflare.astro";
+import Css from "../icons/technologies/Css.astro";
+import Docker from "../icons/technologies/Docker.astro";
+import Firebase from "../icons/technologies/Firebase.astro";
+import GoogleBard from "../icons/technologies/GoogleBard.astro";
+import Html from "../icons/technologies/Html.astro";
+import Javascript from "../icons/technologies/Javascript.astro";
+import Metamask from "../icons/technologies/Metamask.astro";
+import MongoDb from "../icons/technologies/MongoDb.astro";
+import Netlify from "../icons/technologies/Netlify.astro";
+import Ngrok from "../icons/technologies/Ngrok.astro";
+import NodeJS from "../icons/technologies/NodeJS.astro";
+import OpenAI from "../icons/technologies/OpenAI.astro";
+import Pm2 from "../icons/technologies/Pm2.astro";
+import Python from "../icons/technologies/Python.astro";
+import React from "../icons/technologies/React.astro";
+import Solidity from "../icons/technologies/Solidity.astro";
+import SqlServer from "../icons/technologies/SqlServer.astro";
+import TypesScript from "../icons/technologies/TypesScript.astro";
+
+
+
+interface Tag {
+  id: string;
+  name: string;
+  class: string;
+  icon: any;
+}
+
+
+const TAGS: Record<string, Tag> = {
+  NEXT: {
+    id: "NEXT",
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    id: "TAILWIND",
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  ASTRO: {
+    id: "ASTRO",
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
+  AWS: {
+    id: "AWS",
+    name: "AWS Services",
+    class: "bg-black text-white",
+    icon: Aws,
+  },
+  ATLASSIAN: {
+    id: "ATLASSIAN",
+    name: "Atlassian",
+    class: "bg-black text-white",
+    icon: AtlassianIcon,
+  },
+  AZURE: {
+    id: "AZURE",
+    name: "Azure",
+    class: "bg-black text-white",
+    icon: Azure,
+  },
+  BOOTSTRAP: {
+    id: "BOOTSTRAP",
+    name: "Bootstrap",
+    class: "bg-black text-white",
+    icon: Boostrap,
+  },
+  CLOUDFLARE: {
+    id: "CLOUDFLARE",
+    name: "Cloudflare",
+    class: "bg-black text-white",
+    icon: Cloudflare,
+  },
+  CSS: {
+    id: "CSS",
+    name: "CSS",
+    class: "bg-[#1a1a32] text-white",
+    icon: Css,
+  },
+  DOCKER: {
+    id: "DOCKER",
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker,
+  },
+  FIREBASE: {
+    id: "FIREBASE",
+    name: "Firebase",
+    class: "bg-[#027bcc] text-white",
+    icon: Firebase,
+  },
+  GOOGLEBARD: {
+    id: "GOOGLEBARD",
+    name: "Google Bard",
+    class: "bg-black text-white",
+    icon: GoogleBard,
+  },
+  HTML: {
+    id: "HTML",
+    name: "HTML",
+    class: "bg-[#d42900] text-white",
+    icon: Html,
+  },
+  JAVASCRIPT: {
+    id: "JAVASCRIPT",
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: Javascript,
+  },
+  METAMASK: {
+    id: "METAMASK",
+    name: "Metamask",
+    class: "bg-black text-white",
+    icon: Metamask,
+  },
+  MONGODB: {
+    id: "MONGODB",
+    name: "MongoDB",
+    class: "bg-black text-white",
+    icon: MongoDb,
+  },
+  NETLIFY: {
+    id: "NETLIFY",
+    name: "Netlify",
+    class: "bg-black text-white",
+    icon: Netlify,
+  },
+  NGROK: {
+    id: "NGROK",
+    name: "Ngrok",
+    class: "bg-black text-white",
+    icon: Ngrok,
+  },
+  NODEJS: {
+    id: "NODEJS",
+    name: "Node.js",
+    class: "bg-black text-white",
+    icon: NodeJS,
+  },
+  OPENAI: {
+    id: "OPENAI",
+    name: "OpenAI",
+    class: "bg-black text-white",
+    icon: OpenAI,
+  },
+  PM2: {
+    id: "PM2",
+    name: "PM2",
+    class: "bg-black text-white",
+    icon: Pm2,
+  },
+  PYTHON: {
+    id: "PYTHON",
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
+  },
+  REACT: {
+    id: "REACT",
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  SOLIDITY: {
+    id: "SOLIDITY",
+    name: "Solidity",
+    class: "bg-white text-black",
+    icon: Solidity,
+  },
+  SQLSERVER: {
+    id: "SQLSERVER",
+    name: "SQL Server",
+    class: "bg-black text-white",
+    icon: SqlServer,
+  },
+  TYPESCRIPT: {
+    id: "TYPESCRIPT",
+    name: "TypeScript",
+    class: "bg-[#082e5f] text-white",
+    icon: TypesScript,
+  }
+};
+
+// Components
+import GithubIcon from "../icons/GithubIcon.astro";
+import LinkButton from "../LinkButton.astro";
+
+import  { t } from "i18next";
+
+interface ProjectsItemProps {
+    title: string;
+    description: string;
+    github: string;
+    link?: string;
+    image?: string;
+    tags?: string[];
+    
+}
+
+const PROJECTS: ProjectsItemProps[] = t("projects", { returnObjects: true }) as ProjectsItemProps[];
+
+
+---
+
+<div id="projects-container" class="flex flex-col gap-y-16 pt-12 pb-12">
+  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+      <div class="w-full md:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 md:max-w-lg">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          {title}
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">       
+            {tags && tags.map((tag) => (
+              <li>
+                <span class={`flex gap-x-2 rounded-full text-xs ${TAGS[tag].class} py-1 px-2`}>
+                  <TAGS[tag].icon class="size-4" />
+                  <!--This is a comment to indicate that this is a warning that cannot be hidden but has not affected functionality during testing-->
+
+                  {TAGS[tag].name}
+                </span>
+              </li>
+            ))} 
+          </ul>
+        </div>
+        <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GithubIcon class="size-6" />
+              {t("projectsLabels.projectCode")}
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              {t("projectsLabels.projectPreview")}
+            </LinkButton>
+          )}
+        </footer>
+      </div>
+    </article>
+  ))}
+</div>
+
+
+<style>
+  #projects-container * {
+    @media (prefers-color-scheme: light) {
+      color: white;
+    }
+  }
+</style>
