@@ -72,6 +72,7 @@
     "contact": "Contacto"
   },
   "aboutMe": {
+    "title": "Sobre mí",
     "greeting": "¡Hola! Soy Karl, Ingeniero en Computación",
     "description": "Ejerco como Ingeniero en Computación especializado en  el desarrollo de software y ciberseguridad. Mi pasión por la tecnología me impulsa a estar a la vanguardia de las últimas tendencias. Con experiencia en crear aplicaciones seguras y eficientes, me dedico a implementar las mejores prácticas para proteger sistemas y datos.",
     "skills": "Mi experiencia técnica ha contribuido activamente en la comunidad tecnológica, compartiendo conocimientos y colaborando en proyectos de última vanguardia. Gracias a mis competencias en programación y seguridad informática, ofrezco exposición a temas clave para aquellos interesados en explorar tecnologías de punta.",
@@ -83,22 +84,5 @@
     "ProjectMemorialAuthor": "- Programación ATS",
     "projectPreview": "Vista previa",
     "projectCode": "Código"
-  },
-  "projects": [
-    {
-      "title": "Lanzamientos de SpaceX",
-      "description": "El proyecto de lanzamientos de SpaceX es una demostración estática desarrollada en el marco web Astro con Typescript, utilizando Tailwind CSS. Sirve como ejercicio educativo inspirado en el curso de Astro creado por MiduLive y adaptado por Kaserhit.",
-      "link": "https://kaserhit-astro-space.netlify.app/",
-      "github": "https://github.com/Kaserhit/Astro-Space-Kaserhit",
-      "image": "/assets/img/projects/SpaceX.jpg",
-      "tags": ["ASTRO", "TAILWIND", "TYPESCRIPT"]
-    },
-    {
-      "title": "Página de Aterrizaje de Sotecsi",
-      "description": "El sistema web de Sotecsi fue sometido a una renovación completa de Front-end, que abarcó el rediseño y mejora de su interfaz de usuario y experiencia. Este esfuerzo se desarrolló en el ámbito de la creación de un sistema web revitalizado y el desarrollo simultáneo de una Aplicación Web Progresiva (PWA).",
-      "link": "https://sotecsi.web.app/",
-      "image": "/assets/img/projects/Sotecsi.jpg",
-      "tags": ["HTML", "CSS", "JAVASCRIPT", "FIREBASE"]
-    }
-  ]
+  }
 }

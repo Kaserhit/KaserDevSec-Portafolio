@@ -68,6 +68,7 @@
     "educationTimeLine": "Education & Certifications"
   },
   "aboutMe": {
+    "title": "About Me",
     "greeting": "Hello! I'm Karl, a Computer Engineer.",
     "description": "I work as a Computer Engineer specialized in software development and cybersecurity. My passion for technology drives me to stay at the forefront of the latest trends. With experience in creating secure and efficient applications, I focus on implementing best practices to protect systems and data.",
     "skills": "My technical expertise has actively contributed to the tech community, sharing knowledge and collaborating on cutting-edge projects. Thanks to my programming and cybersecurity skills, I offer insight into key topics for those interested in exploring cutting-edge technologies.",
@@ -84,22 +85,5 @@
     "ProjectMemorialAuthor": "- ATS Programming",
     "projectPreview": "Preview",
     "projectCode": "Code"
-  },
-  "projects": [
-    {
-      "title": "SpaceX Launches",
-      "description": "The SpaceX launches project is a static demo developed in the Astro Web Framework with Typescript, utilizing Tailwind CSS. It serves as an educational exercise inspired by the Astro course created by MiduLive and adapted by Kaserhit.",
-      "link": "https://kaserhit-astro-space.netlify.app/",
-      "github": "https://github.com/Kaserhit/Astro-Space-Kaserhit",
-      "image": "/assets/img/projects/SpaceX.jpg",
-      "tags": ["ASTRO", "TAILWIND", "TYPESCRIPT"]
-    },
-    {
-      "title": "Sotecsi Landing Page",
-      "description": "The Sotecsi web system underwent a comprehensive Front-end renovation, which encompassed the redesign and enhancement of its user interface and experience. This endeavor unfolded within the ambit of crafting a revitalized web system and the concurrent development of a Progressive Web Application (PWA).",
-      "link": "https://sotecsi.web.app/",
-      "image": "/assets/img/projects/Sotecsi.jpg",
-      "tags": ["HTML", "CSS", "JAVASCRIPT", "FIREBASE"]
-    }
-  ]
+  }
 }
