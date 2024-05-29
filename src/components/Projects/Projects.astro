@@ -290,9 +290,9 @@ if (i18next.language === "ja") {
           {title}
         </h3>
         <div class="flex flex-wrap mt-2">
-          <ul class="flex flex-row mb-2 gap-x-2">       
-            {tags.map((tag) => (
-            <li>
+        <ul class="flex flex-wrap md:flex-row mb-2 gap-x-2 gap-y-2">
+          {tags.map((tag) => (
+            <li class="mb-2">
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
@@ -300,9 +300,9 @@ if (i18next.language === "ja") {
                 {tag.name}
               </span>
             </li>
-          ))}
-          </ul>
-        </div>
+        ))}
+        </ul>
+      </div>
         <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
         <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
