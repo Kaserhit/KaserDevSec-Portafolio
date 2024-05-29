@@ -1,5 +1,6 @@
 {
-  "name": "App",
+  "name": "KaserDevSec - Portafolio",
+  "short_name": "KaserDevSec",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
@@ -43,5 +44,9 @@
       "type": "image/png",
       "density": "1.0"
     }
-  ]
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
 }
