@@ -13,6 +13,8 @@ import ProjectsMemorial from "../components/Projects/ProjectsMemorial.astro";
 import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
 import MediumIcon from "../components/icons/MediumIcon.astro";
+import KaggleIcon from "../components/icons/KaggleIcon.astro";
+import HackTheBoxIcon from "../components/icons/HackTheBoxIcon.astro";
 import EmailIcon from "../components/icons/EmailIcon.astro";
 import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro";
 import BriefCase from "../components/icons/BriefCaseIcon.astro";
@@ -60,7 +62,8 @@ changeLanguage("en");
                     </h2>
                 </div>
             </div>
-            <nav class="flex flex-wrap justify-center items-center gap-x-4 pt-5 mb-5 animate__animated animate__fadeIn">
+            <nav class="flex flex-wrap justify-center items-center gap-x-4 pt-5 mb-5 animate__animated animate__fadeIn space-y-5">
+                <p/>
                 <SocialPill href="https://github.com/Kaserhit">
                     <GithubIcon class="size-6" />
                     Github
@@ -72,6 +75,14 @@ changeLanguage("en");
                 <SocialPill href="https://medium.com/@karl23aase">
                     <MediumIcon class="size-6" />
                     Medium
+                </SocialPill>
+                <SocialPill href="https://app.hackthebox.com/users/741684">
+                    <HackTheBoxIcon class="size-6" />
+                    Hack The Box
+                </SocialPill>
+                <SocialPill href="https://www.kaggle.com/karlaaseblanco">
+                    <KaggleIcon class="size-6" />
+                    Kaggle
                 </SocialPill>
             </nav>
             <a href="https://www.linkedin.com/in/karl-aase/" target="_blank" rel="noopener" class="flex justify-center items-center hover:animate-pulse md:pt-10 animate__animated animate__fadeIn">
