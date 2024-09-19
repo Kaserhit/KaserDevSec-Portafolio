@@ -20,6 +20,8 @@ import ProfileCheckIcon from "../../components/icons/ProfileCheckIcon.astro";
 import BriefCase from "../../components/icons/BriefCaseIcon.astro";
 import GraduationIcon from "../../components/icons/GraduationIcon.astro";
 import CodeIcon from "../../components/icons/CodeIcon.astro";
+import StackIcon from "../../components/icons/StackIcon.astro";
+import Skills from "../../components/Skills/Skills.astro";
 
 changeLanguage("es");
 ---
@@ -96,6 +98,13 @@ changeLanguage("es");
             </h2>
             <ProjectsMemorial/>
             <Projects/>
+        </SectionContainerAnimated>
+        <SectionContainerAnimated id="skills" class="py-12  gap-x-4 animate__animated animate__fadeIn" displayArrow={true}>
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center justify-center pb-12">
+                {t("skillsLabels.skillsLabel")}
+                <StackIcon class="size-6"/>
+            </h2>
+            <Skills/>
         </SectionContainerAnimated>
         <SectionContainerAnimated id="expertise" class="py-12 pb-12 gap-x-4 animate__animated animate__fadeIn" displayArrow={true}>
             <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center justify-end">

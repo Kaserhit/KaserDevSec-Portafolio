@@ -1,0 +1,143 @@
+---
+// Import for Icon on Pills (Habilidades)
+
+//FRONT-END
+
+import Tailwind from "../icons/technologies/Tailwind.astro";
+import AstroIcon from "../icons/technologies/AstroIcon.astro";
+import Boostrap from "../icons/technologies/Boostrap.astro";
+import Css from "../icons/technologies/Css.astro";
+import Firebase from "../icons/technologies/Firebase.astro";
+import Html from "../icons/technologies/Html.astro";
+import Javascript from "../icons/technologies/Javascript.astro";
+import Metamask from "../icons/technologies/Metamask.astro";
+import React from "../icons/technologies/React.astro";
+import TypesScript from "../icons/technologies/TypesScript.astro";
+
+//BACK-END
+
+import GoogleBard from "../icons/technologies/GoogleBard.astro";
+import OpenAI from "../icons/technologies/OpenAI.astro";
+
+import Python from "../icons/technologies/Python.astro";
+import MongoDb from "../icons/technologies/MongoDb.astro";
+import NodeJS from "../icons/technologies/NodeJS.astro";
+import Solidity from "../icons/technologies/Solidity.astro";
+import SqlServer from "../icons/technologies/SqlServer.astro";
+
+
+//DevSecOps
+
+import Netlify from "../icons/technologies/Netlify.astro";
+import Aws from "../icons/technologies/Aws.astro";
+import Cloudflare from "../icons/technologies/Cloudflare.astro";
+import Docker from "../icons/technologies/Docker.astro";
+import Ngrok from "../icons/technologies/Ngrok.astro";
+import Pm2 from "../icons/technologies/Pm2.astro";
+
+
+import { t } from "i18next";
+
+
+interface Skill {
+  name: string;
+  icon: any; 
+  class: string;
+}
+
+
+const frontEndSkills: Skill[] = [
+  { name: "React", icon: React, class: "bg-black text-white" },
+  { name: "Tailwind CSS", icon: Tailwind, class: "bg-[#003159] text-white" },
+  { name: "Astro", icon: AstroIcon, class: "bg-black text-white" },
+  { name: "HTML", icon: Html, class: "bg-[#d42900] text-white" },
+  { name: "CSS", icon: Css, class: "bg-[#1a1a32] text-white" },
+  { name: "JavaScript", icon: Javascript, class: "bg-black text-white" },
+  { name: "TypeScript", icon: TypesScript, class: "bg-[#082e5f] text-white" },
+  { name: "Bootstrap", icon: Boostrap, class: "bg-[#7952B3] text-white" },
+  { name: "Firebase", icon: Firebase, class: "bg-[#027bcc] text-white" },
+  { name: "Metamask", icon: Metamask, class: "bg-[#003159] text-white" },
+];
+
+const backEndSkills: Skill[] = [
+  { name: "Node.js", icon: NodeJS, class: "bg-black text-white" },
+  { name: "MongoDB", icon: MongoDb, class: "bg-[#47A248] text-white" },
+  { name: "SQL Server", icon: SqlServer, class: "bg-[#CC2927] text-white" },
+  { name: "Python", icon: Python, class: "bg-[#003159] text-white" },
+  { name: "Solidity", icon: Solidity, class: "bg-[#A9A9A9] text-white" },
+  { name: "Google Bard", icon: GoogleBard, class: "bg-black text-white" },
+  { name: "OpenAI", icon: OpenAI, class: "bg-black text-white" },
+];
+
+const devSecOpsSkills: Skill[] = [
+  { name: "AWS Services", icon: Aws, class: "bg-[#8B4513] text-white" },
+  { name: "Docker", icon: Docker, class: "bg-[#003159] text-white" },
+  { name: "Netlify", icon: Netlify, class: "bg-[#008080] text-white" },
+  { name: "Cloudflare", icon: Cloudflare, class: "bg-[#8B4513] text-white" },
+  { name: "Ngrok", icon: Ngrok, class: "bg-black text-white" },
+  { name: "PM2", icon: Pm2, class: "bg-[#003159] text-white" },
+];
+
+---
+<div id="skills-container" class="flex flex-col gap-y-16 pt-12 pb-12">
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{t("skillsLabels.frontEnd")}</h2>
+    <ul class="flex flex-wrap gap-4 mt-4">
+      {frontEndSkills.map((skill: Skill) => (
+        <li class="skill-item">
+          <span class={`flex gap-x-2 rounded-full text-xs ${skill.class} py-1 px-2 transition-transform duration-300 ease-in-out hover:scale-110`}>
+            <skill.icon class="size-4" />
+            {skill.name}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{t("skillsLabels.backEnd")}</h2>
+    <ul class="flex flex-wrap gap-4 mt-4">
+      {backEndSkills.map((skill: Skill) => (
+        <li class="skill-item">
+          <span class={`flex gap-x-2 rounded-full text-xs ${skill.class} py-1 px-2 transition-transform duration-300 ease-in-out hover:scale-110`}>
+            <skill.icon class="size-4" />
+            {skill.name}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{t("skillsLabels.devSecOps")}</h2>
+    <ul class="flex flex-wrap gap-4 mt-4">
+      {devSecOpsSkills.map((skill: Skill) => (
+        <li class="skill-item">
+          <span class={`flex gap-x-2 rounded-full text-xs ${skill.class} py-1 px-2 transition-transform duration-300 ease-in-out hover:scale-110`}>
+            <skill.icon class="size-4" />
+            {skill.name}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</div>
+
+<style>
+  /* Animación de hover para los iconos */
+  .skill-item:hover {
+    transform: scale(1.1);
+  }
+
+  /* Transición suave */
+  .skill-item {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Asegúrate de que los colores sigan el esquema de color */
+  #skills-container * {
+    @media (prefers-color-scheme: light) {
+      color: white;
+    }
+  }
+</style>

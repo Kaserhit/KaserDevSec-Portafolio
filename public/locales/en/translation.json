@@ -90,5 +90,11 @@
     "ProjectMemorialAuthor": "- ATS Programming",
     "projectPreview": "Preview",
     "projectCode": "Code"
+  },
+  "skillsLabels": {
+    "skillsLabel": "Technical Skills Overview",
+    "frontEnd": "FrontEnd",
+    "backEnd": "Back End",
+    "devSecOps": "DevSecOps"
   }
 }
