@@ -39,6 +39,11 @@
   ],
   "education": [
     {
+      "date": "July 2024 - August 2024",
+      "title": "Artificial Intelligence with Python",
+      "description": "CENFOTEC University"
+    },
+    {
       "date": "January 2022 - April 2024",
       "title": "Specialization in Cyber Security",
       "description": "Latin American University of Science and Technology | ULACIT"

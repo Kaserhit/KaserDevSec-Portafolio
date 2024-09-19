@@ -42,6 +42,11 @@
   },
   "education": [
     {
+      "date": "Julio de 2024 - Agosto de 2024",
+      "title": "Inteligencia Artificial con Python",
+      "description": "Universidad CENFOTEC"
+    },
+    {
       "date": "Enero de 2022 - Abril de 2024",
       "title": "Especialización en Ciberseguridad",
       "description": "Universidad Latinoamericana de Ciencia y Tecnología | ULACIT"
